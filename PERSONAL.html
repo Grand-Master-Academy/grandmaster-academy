@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GrandMaster Academy</title>
+	<!-- CSS styles -->
+	<style>
+		body {
+			background-color: #FFFFFF;
+			font-family: Arial, sans-serif;
+		}
+
+		header {
+			background-color: #1a4addbe;
+			color: white;
+			padding: 20px;
+			text-align: center;
+			position: relative;
+		}
+
+		header:after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.2) 100%);
+			z-index: -1;
+		}
+
+		h1 {
+			margin-top: 0;
+			font-size: 48px;
+			letter-spacing: 2px;
+			text-shadow: 2px 2px 5px #000000;
+		}
+
+		.logo {
+			max-width: 150px;
+			margin-top: 20px;
+			filter: drop-shadow(2px 2px 5px #000000);
+		}
+
+		main {
+			margin: 20px;
+			padding: 20px;
+			background-color: #F5F5F5;
+			box-shadow: 0 0 10px #CCCCCC;
+			text-align: center;
+			animation: slide-up 1s ease-out;
+		}
+
+		p {
+			font-size: 24px;
+			line-height: 1.5;
+		}
+
+		button {
+			background-color: #4285F4;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 18px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+			animation: pulse 2s infinite;
+		}
+
+		button:hover {
+			background-color: #1A73E8;
+		}
+
+		/* Animations */
+		@keyframes slide-up {
+			from {
+				transform: translateY(50px);
+				opacity: 0;
+			}
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		@keyframes pulse {
+			0% {
+				transform: scale(1);
+			}
+			50% {
+				transform: scale(1.1);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- Header section -->
+	<header>
+		<!-- Logo image -->
+		<img src="https://drive.google.com/file/d/1dPtnxZlJLLImupa9FHULBTXmq6uizHWi/view?usp=sharing" alt="GrandMaster Academy logo" class="logo">
+		<!-- Main heading -->
+		<h1>Welcome to GrandMaster Academy</h1>
+	</header>
+	<form action="upload.php" method="POST" enctype="multipart/form-data">
+		<label for="image">Select image to upload:</label>
+		<input type="file" name="image" id="image">
+		<input type="submit" value="Upload Image">
+	</form>	
+	<!-- Main content section -->
+	<main>
+		<!-- Text content -->
+		<p>GrandMaster Academy is the best place to learn new skills and improve your existing ones.</p>
+		<!-- Get started button -->
+		<a href="https://playeroneus.wixsite.com/my-site-1"><button>Get Started</button></a>
+	</main>
+</body>
